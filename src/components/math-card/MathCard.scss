@@ -1,0 +1,76 @@
+// TODO import this from themes.scss
+$theme-color: #61dafb;
+$theme-color-accent-dark: #01475a;
+
+$card-font-size: 3rem;
+
+.card-size-med {
+  min-width: 15rem;
+  max-height: 14rem;
+}
+
+.card-size-lg {
+  min-width: 18rem;
+  max-height: 14rem;
+}
+
+.math-card {
+  flex: auto;
+
+  background-color: $theme-color-accent-dark;
+  font-size: $card-font-size;
+
+  border-radius: calc(3vmin);
+  box-shadow: 0px 0px 10px $theme-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     // horizontal: don't stretch to fill width
+  align-content: center;
+
+  .math-card-content {
+    flex: initial;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    div {
+      margin-left: 0.2em;
+    }
+
+    hr {
+      align-self: stretch;
+      margin: 0 10% 0 10%;
+      padding: 0;
+      border: 1px solid $theme-color;
+    }
+  }
+
+  .equation-box {
+    flex: initial;
+
+    display: flex;
+    align-items: flex-end;     // horizontal: don't stretch to fill width
+    align-content: center;
+
+    .operand-box {
+      flex: initial;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .result-box {
+      align-self:stretch;
+    }
+
+  }
+
+  .result-line {
+    align-self: stretch;
+    border-top: 1px solid $theme-color;
+  }
+}
+

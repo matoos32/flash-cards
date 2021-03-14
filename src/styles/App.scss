@@ -1,0 +1,82 @@
+@import "./animations.scss";
+@import "./constants.scss";
+@import "./themes.scss";
+
+$navbar-min-height: 20vmin;
+
+// Ensure border, padding, margin pixels don't expand the size of elements
+* {
+  box-sizing: border-box;
+}
+
+.App-logo {
+  width: calc(10px + 10vmin);
+  height: calc(10px + 10vmin);
+  pointer-events: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-size: $standard-font-size;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  flex: initial;
+  min-height: $navbar-min-height;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-body {
+  flex: auto;
+  padding: $viewport-edge-spacing;
+
+  // Flex control for nested elements
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .tap-prompt {
+    margin-top: 5vmin;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #555555;
+    justify-self: flex-end;
+  }
+}
+
+.App-footer {
+  flex: initial;  
+  min-height: $navbar-min-height;
+  padding: $viewport-edge-spacing;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
