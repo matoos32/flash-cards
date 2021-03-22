@@ -1,0 +1,50 @@
+@import "../../styles/themes.scss";
+
+// TODO: get colors from theme
+$theme-color: #61dafb;
+$bg-color-widget: $theme-color;
+
+$button-font-size: 5rem;
+$button-size: 18vmin;
+
+.card-controls {
+  //border: 2px dashed yellow;
+  max-width: 100vmin;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-group {
+  flex: auto;
+  //border: 2px dashed red;
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  button {
+    flex: initial;
+
+    margin: 5px;
+    min-height: $button-size;
+    max-height: $button-size;
+    min-width: $button-size;
+    max-width: $button-size;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: $bg-color-widget;
+    text-decoration: none;
+    text-align: center;
+    font-size: 7vmin;
+    font-family: monospace;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}

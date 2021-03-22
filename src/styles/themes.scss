@@ -1,0 +1,51 @@
+.theme-dark {
+
+  $theme-color: #61dafb;
+  $theme-color-accent-dark: #193841;
+
+  $bg-color-pane: #282c34;
+  $bg-color-pane-accent-dark: #222222;
+  $bg-color-pane-accent-light: #444444;
+
+  $bg-color-widget: $theme-color;
+
+  $std-foreground-color: #ffffff;
+
+  $line-separator-color: $std-foreground-color;
+
+  $link-color: $theme-color;
+
+  body {
+    background-color: $bg-color-pane;
+  }
+
+  .App {
+    background-color: blue;
+  }
+
+  .App-header {
+    background-color: $bg-color-pane;
+    color: $std-foreground-color;
+  }
+
+  .App-body {
+    background-color: $bg-color-pane-accent-dark;
+    color: $std-foreground-color;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $theme-color;
+  }
+
+  .App-footer {
+    background-color: $bg-color-pane;
+    color: $std-foreground-color;
+  }
+
+  .App-link {
+    color: $link-color;
+  }
+
+  .dashed-outline {
+    border: 1px dashed $theme-color;
+  }
+}

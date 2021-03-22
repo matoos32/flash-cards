@@ -1,0 +1,153 @@
+$rotational-animation-duration-secs: 1.25s;
+$perspective: 1000px;
+
+// TODO: import this from themes.scss
+$theme-color: #61dafb;
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: spin-clockwise infinite 10s linear;
+  }
+}
+
+.anim-spin-clockwise-360 {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: spin-clockwise;
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.anim-spin-counter-clockwise-360 {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: spin-counter-clockwise;
+}
+
+@keyframes spin-counter-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.anim-flip3d-y-left {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: flip3d-y-left;
+}
+
+@keyframes flip3d-y-left {
+  from {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective($perspective) rotateY(360deg);
+  }
+}
+
+.anim-flip3d-y-right {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: flip3d-y-right;
+}
+
+@keyframes flip3d-y-right {
+  from {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective($perspective) rotateY(-360deg);
+  }
+}
+
+.anim-flip3d-y-up {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: flip3d-y-up;
+}
+
+@keyframes flip3d-y-up {
+  from {
+    transform: perspective($perspective) rotateX(0deg);
+  }
+
+  to {
+    transform: perspective($perspective) rotateX(360deg);
+  }
+}
+
+.anim-flip3d-y-down {
+  animation-duration: $rotational-animation-duration-secs;
+  animation-name: flip3d-y-down;
+}
+
+@keyframes flip3d-y-down {
+  from {
+    transform: perspective($perspective) rotateX(0deg);
+  }
+
+  to {
+    transform: perspective($perspective) rotateX(-360deg);
+  }
+}
+
+.anim-border-aura {
+  animation-duration: 4.0s;
+  animation-name: border-aura;
+  animation-iteration-count: infinite;
+}
+
+@keyframes border-aura {
+  from {
+    box-shadow: 0px 0px 10px $theme-color;
+  }
+
+  50% {
+    box-shadow: 0px 0px 15px $theme-color;
+  }
+
+  to {
+    box-shadow: 0px 0px 10px $theme-color;
+  }
+}
+
+.anim-fade-out {
+  animation-duration: 0.5s;
+  animation-name: fade-out;
+}
+
+.anim-fade-out2 {
+  animation-duration: 0.5s;
+  animation-name: fade-out2;
+}
+
+@keyframes fade-out {
+
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out2 {
+
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
