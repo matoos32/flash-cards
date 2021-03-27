@@ -2,8 +2,6 @@
 @import "./constants.scss";
 @import "./themes.scss";
 
-$navbar-min-height: 20vmin;
-
 // Ensure border, padding, margin pixels don't expand the size of elements
 * {
   box-sizing: border-box;
@@ -42,7 +40,10 @@ body {
 
 .App-header {
   flex: initial;
-  min-height: $navbar-min-height;
+  min-height: 10vmin;
+  max-height: 20vmin;
+
+  font-size: 5vmin;
 
   display: flex;
   flex-direction: row;
@@ -58,11 +59,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: center;
+
+  .card-size-lg {
+    min-width: 55vmin;
+  }
 
   .tap-prompt {
     margin-top: 5vmin;
-    font-size: 0.75rem;
+    font-size: 4vmin;
     font-style: italic;
     color: #555555;
     justify-self: flex-end;
@@ -71,8 +77,9 @@ body {
 
 .App-footer {
   flex: initial;  
-  min-height: $navbar-min-height;
   padding: $viewport-edge-spacing;
+
+  min-height: 25vmin;
 
   display: flex;
   flex-direction: row;

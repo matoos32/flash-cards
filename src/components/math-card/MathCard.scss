@@ -2,23 +2,11 @@
 $theme-color: #61dafb;
 $theme-color-accent-dark: #01475a;
 
-$card-font-size: 3rem;
-
-.card-size-med {
-  min-width: 15rem;
-  max-height: 14rem;
-}
-
-.card-size-lg {
-  min-width: 18rem;
-  max-height: 14rem;
-}
-
 .math-card {
-  flex: auto;
+  flex: 0.5;
 
   background-color: $theme-color-accent-dark;
-  font-size: $card-font-size;
+  font-size: 9vmin;
 
   border-radius: calc(3vmin);
   box-shadow: 0px 0px 10px $theme-color;

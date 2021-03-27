@@ -55,7 +55,6 @@ function App() {
     "anim-spin-counter-clockwise-360"
   ];
 
-  const CARD_SIZE_MEDIUM = "card-size-med";
   const CARD_SIZE_LARGE = "card-size-lg";
 
   const [operationId, setOperationId] = useState(ADDITION);
@@ -181,10 +180,7 @@ function App() {
     setOperand2(op2);
     setResult(res);
     setShowResult(false);
-
-    let aCardSize = (opId === MULTIPLICATION) && (range === THOUSANDS) ? CARD_SIZE_LARGE : CARD_SIZE_MEDIUM;
-
-    setCardSize(aCardSize);
+    setCardSize(CARD_SIZE_LARGE);
   }
 
   function setNextCardAnimation() {
@@ -223,6 +219,7 @@ function App() {
 
   return (
     <div className="App theme-dark">
+      
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div>Welcome to Math Cards!</div>

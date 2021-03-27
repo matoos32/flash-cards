@@ -56,8 +56,8 @@ function FlipRangeCtrls({ranges, onRangeClick}) {
 function MathCardControls({modes, ranges, onModeClick, onRangeClick}) {
   return (
     <div className="card-controls">
-      <FlipRangeCtrls ranges={ranges} onRangeClick={onRangeClick}/>
       <FlipModeSelectionCtrls modes={modes} onModeClick={onModeClick}/>
+      <FlipRangeCtrls ranges={ranges} onRangeClick={onRangeClick}/>
     </div>
   );
 }
