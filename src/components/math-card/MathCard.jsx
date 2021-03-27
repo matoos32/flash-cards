@@ -29,19 +29,16 @@ function MathCard({cardAnimationClass, sizeClass, operationId,
     <div className={"math-card " + cardAnimationClass + " " + sizeClass}
          onClick={onCardClick.bind(this)} >
 
-      { !showResult &&
-        <div className="math-card-content">
+      <div className="math-card-content">
 
-          <div className="equation-box">
-          
-            {operationId}
-
+        <div className="equation-box">
+          {operationId}
           <div className="operand-col">
             <div className="operand-box">
               {operand1}
             </div>
             <div className="operand-box">
-              {operand2}
+            {operand2}
             </div>
           </div>
         </div>
@@ -49,36 +46,9 @@ function MathCard({cardAnimationClass, sizeClass, operationId,
         <div className="result-line" />
 
         <div className="equation-box">
-          <div className="result-box">?</div>
+          <div className="result-box">{showResult ? precisionRound(result, 2) : "?"} </div>
         </div>
       </div>
-      }
-
-      { showResult &&
-        <div className="math-card-content">
-
-          <div className="equation-box">
-          
-            {operationId}
-
-            <div className="operand-col">
-              <div className="operand-box">
-                {operand1}
-              </div>
-              <div className="operand-box">
-                {operand2}
-              </div>
-            </div>
-          </div>
-
-          <div className="result-line" />
-
-          <div className="equation-box">
-            <div className="result-box">{precisionRound(result, 2)}</div>
-          </div>
-
-        </div>
-      }
 
     </div>
   );

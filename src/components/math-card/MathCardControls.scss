@@ -4,33 +4,29 @@
 $theme-color: #61dafb;
 $bg-color-widget: $theme-color;
 
-$button-font-size: 5rem;
-$button-size: 18vmin;
-
 .card-controls {
-  //border: 2px dashed yellow;
-  max-width: 100vmin;
-
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  justify-items: space-evenly;
 }
 
 .btn-group {
   flex: auto;
-  //border: 2px dashed red;
   
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin: 0 3vmin 0 3vmin;
   
   button {
-    flex: initial;
-
-    margin: 5px;
-    min-height: $button-size;
-    max-height: $button-size;
-    min-width: $button-size;
-    max-width: $button-size;
+    flex: auto;
+    flex-grow: 0.1;
+    
+    margin: 0.75vmin;
+    min-height: 15vmin;
+    max-height: 15vmin;
+    min-width: 15vmin;
+    max-width: 15vmin;
 
     border: none;
     border-radius: 10px;
@@ -38,7 +34,9 @@ $button-size: 18vmin;
     background-color: $bg-color-widget;
     text-decoration: none;
     text-align: center;
-    font-size: 7vmin;
+    font-size: 5.5vmin;
+    font-weight: bold;
+    color: #303030;
     font-family: monospace;
     cursor: pointer;
 
